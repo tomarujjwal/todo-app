@@ -1,0 +1,221 @@
+
+:root {
+    --color-darkest: #06283D;
+    --color-regular: #1363DF;
+    --color-light: #47B5FF;
+    --color-lightest: #CAF0F8;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.5s linear;
+}
+body {
+    color: var(--color-darkest);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+#title {
+    margin: 20px 0;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.01);
+    background-image: url("https://images.pexels.com/photos/816608/pexels-photo-816608.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    animation: animate 15s ease-in-out infinite;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+@keyframes animate {
+    0%,100% {
+        background-position: left top;
+    }
+    25% {
+        background-position: right bottom;
+    }
+    50% {
+        background-position: left bottom;
+    }
+    75% {
+        background-position: right top;
+    }
+}
+
+.container-1 {
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+form {
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-darkest);
+    border-radius: 15px;
+    width: 60vw;
+}
+
+form input{
+    border: none;
+    font-size: 34px;
+    background: var(--color-darkest);
+    color: var(--color-lightest);
+    outline: none;
+    padding-left: 5%;
+    width: 90%;
+}
+form button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: var(--color-darkest);
+    padding: 5px 5px;
+    margin-right: 5px;
+}
+form button:hover {
+    background-color: #243A73;
+    border-radius: 50%;
+}
+
+/* ----------------New List Container----------------- */
+
+.todo-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.todo-list {
+    list-style: none;
+    width: 60vw;
+    background-color: transparent;
+}
+
+.todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: red;
+    color: black;
+    margin: 10px 0;
+    padding: 5px;
+    background-color: var(--color-lightest);
+    border-radius: 15px;
+    overflow: hidden;
+}
+.cmpltBtn {
+    background-color: #B8F1B0;
+    border-radius: 50%;
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+}
+.cmpltBtn:hover {
+    background-color: #00FFAB;
+    border-radius: 50%;
+}
+.deleteBtn {
+    background-color: #FAD4D4;
+    border-radius: 50%;
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+}
+.deleteBtn:hover {
+    background-color: #F47C7C;
+    border-radius: 50%;
+}
+
+.todo li {
+    flex: 1;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+.fa-check {
+    color: #14C38E;
+}
+.fa-trash {
+    color: #F32424;
+}
+
+.todo-done {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+@media screen and (max-width:768px) {
+    form {
+        width: 90vw;
+    }
+    .todo-list {
+        width: 90vw;
+    }
+}
+
+/* ============ Animated Background ============ */
+.main__bg {
+    background-image: linear-gradient(-60deg, #947EC3 50%, #0199ff 50%);
+    animation: slide 3s ease-in-out infinite alternate;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: -50%;
+    right: -50%;
+    opacity: 0.5;
+    z-index: -1;
+}
+.layer1 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+.layer2 {
+    animation-duration: 5s;
+}
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(25%);
+    }
+}
+
+/* ====== ClearAllButton ===== */
+.clearAllButton {
+    background-color: var(--color-darkest);
+    color: var(--color-regular);
+    font-size: 24px;
+    margin: 20px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 15px;
+}
+.clearAllButton:hover {
+    opacity: 0.9;
+    color: var(--color-light);
+    cursor: pointer;
+}

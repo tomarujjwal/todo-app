@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+
+    <title>Web Wire - To-Do List</title>
+
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body onload="fetching()">
+
+    <div class="main__bg"></div>
+    <div class="main__bg layer1"></div>
+    <div class="main__bg layer2"></div>
+
+    <header id="title">To-do List</header>
+
+    <div class="container-1">
+        <form>
+            <input type="text" class="todo-input" />
+              <button class="todo-button">
+                <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/mecwbjnp.json"
+                            trigger="click"
+                            colors="primary:#1363DF,secondary:#1363DF"
+                            stroke="100"
+                            style="width:50px;height:50px">
+                        </lord-icon>
+              </button>
+        </form>
+      
+        <div class="todo-container">
+        <ul class="todo-list"></ul>           
+        </div>
+        
+        <button class="clearAllButton">
+            Clear All
+        </button>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
